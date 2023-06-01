@@ -9,8 +9,8 @@ COPY mappings/ /wiremock/mappings/
 # VOLUME /tmp
 USER 10014
 
-COPY wiremock-jre8-standalone-2.35.0.jar /wiremock/wiremock-jre8-standalone-2.35.0.jar
+COPY --from=0 "/wiremock-jre8-standalone-2.35.0.jar" app.jar
 
 EXPOSE 8080
-CMD ["java", "-jar", "wiremock-jre8-standalone-2.35.0.jar", "--port", "8080", "--root-dir", "/wiremock"]
+CMD ["java", "-jar", "app.jar", "--port", "8080", "--root-dir", "/wiremock"]
 
