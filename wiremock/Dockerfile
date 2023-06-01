@@ -1,5 +1,5 @@
 # Create a new user with UID 10014
-FROM openjdk:11-alpine
+FROM openjdk11:jre-11.0.19_7
 WORKDIR /wiremock
 COPY mappings/ /wiremock/mappings/
 
