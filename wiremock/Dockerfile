@@ -10,5 +10,5 @@ COPY mappings/ /wiremock/mappings/
 USER 10014
 
 EXPOSE 8080
-CMD ["java", "-jar", "wiremock-standalone.jar", "--port", "8080", "--root-dir", "/wiremock"]
+CMD ["java", "-jar", "wiremock-jre8-standalone-2.35.0.jar", "--port", "8080", "--root-dir", "/wiremock"]
 
