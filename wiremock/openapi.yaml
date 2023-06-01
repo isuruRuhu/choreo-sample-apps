@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: WireMock API
+  version: 1.0.0
+paths:
+  /api/{endpoint}:
+    parameters:
+      - name: endpoint
+        in: path
+        description: The API endpoint to mock
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Mock API response
+      operationId: mockApiResponse
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Hello, WireMock!
