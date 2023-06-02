@@ -3,7 +3,7 @@ WORKDIR /wiremock
 COPY mappings/ /wiremock/mappings/
 EXPOSE 8080
 
-RUN ls -l
+RUN ls -l /
 
 USER 10014
 COPY wiremock-jre8-standalone-2.35.0.jar .
